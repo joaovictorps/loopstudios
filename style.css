@@ -6,8 +6,10 @@
     text-decoration:none;
     border:0;
     box-sizing: border-box;
-    /* font-family: 'Alata', sans-serif;
-    font-family: 'Josefin Sans', sans-serif; */
+    font-family: 'Josefin Sans', sans-serif; 
+    /* 
+    font-family: 'Alata', sans-serif;
+    */
 }
 
 :root {
@@ -19,3 +21,146 @@
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+.logo {
+    max-width: 192px;
+    width: 100%;
+    height: 32px;
+    background: url('./images/logo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#menu {
+    display: none;
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input[type='checkbox'] + label {
+    margin-left: 10px;
+    display: block;
+    width: 24px;
+    height: 20px;
+    background: url('./images/icon-hamburger.svg') no-repeat;
+}
+
+input[type='checkbox']:checked + label {
+    background-image: url('./images/icon-close.svg');
+}
+
+#menu-list {
+    display: none;
+}
+
+ul#menu-list.open {
+    position: absolute;
+    background-color: var(--black);
+    left: 0; top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    padding: 5%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#menu-list > li {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+#menu-list > li > a {
+    color: var(--dark-gray);
+}
+
+.banner-header {
+    height: 100vh;
+    background-image: url('./images/mobile/image-hero.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.banner-header > h1 {
+    text-transform: uppercase;
+    color: var(--white);
+    /* line-break: loose; */
+    font-size: 11vw;
+    letter-spacing: 1px;
+    line-height: 47px;
+    padding: 5%;
+    border: 2px solid var(--white);
+}
+
+@media (min-width: 500px) {
+    .banner-header > h1 {
+        padding: 3.5%;
+        width: 655px;
+        font-size: 62px;
+        line-height: 68px;
+        justify-content: flex-start;
+
+    }
+}
+
+@media (min-width: 720px) {
+    input[type='checkbox'] + label {
+        display: none;
+    }
+
+    .navigation {
+        padding: 40px 5%;
+        position: absolute;
+    }
+
+    #menu-list {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    ul#menu-list.open {
+        position: relative;
+        background-color: rgba(0,0,0,0);
+        width: auto;
+        height: auto;
+        z-index: 0;
+        padding: 5%;
+    
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #menu-list > li {
+        text-transform:none;
+        font-size: 15px;
+        margin: 0 0 0 20px;
+    }
+    
+    #menu-list > li > a {
+        font-family: 'Alata', sans-serif;
+        color: var(--white);
+    }
+
+    .banner-header {
+        width: 100%;
+        height: 590px;
+        background-image: url('./images/desktop/image-hero.jpg');
+        background-size: 100% 100%;
+    }
+}
