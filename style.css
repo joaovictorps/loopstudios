@@ -108,18 +108,102 @@ ul#menu-list.open {
     border: 2px solid var(--white);
 }
 
-@media (min-width: 500px) {
+.banner-main,
+.card {
+    padding: 30px;
+}
+
+.banner-main > img,
+.card > img {
+    width: 100%;
+}
+
+.banner-main > h2,
+.our-creations > h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 50px 0 20px 0;
+}
+
+.our-creations {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.banner-main > p {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--very-dark-gray);
+    text-align:center;
+    line-height: 28px;
+}
+
+.card {
+    position: relative;
+}
+
+.card > h3 {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    text-transform: uppercase;
+    color : var(--white);
+    font-weight: 300;
+}
+
+.see-all {
+    font-weight: 700;
+    font-family: 'Alata', sans-serif;
+    letter-spacing: 8px;
+    color: var(--black);
+    border: 1px solid var(--black);
+    text-transform: uppercase;
+    padding: 10px 30px;
+}
+
+footer {
+    padding: 50px 0;
+    background-color: var(--black);
+    text-align: center;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-footer > ul > li {
+    margin: 30px 0;
+}
+
+.nav-footer > ul > li > a {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.icons > a {
+    margin: 0 8px;
+}
+
+.copyright {
+    margin-top: 20px;
+    color: var(--dark-gray);
+}
+
+@media screen and (min-width: 500px) {
     .banner-header > h1 {
         padding: 3.5%;
         width: 655px;
         font-size: 62px;
         line-height: 68px;
         justify-content: flex-start;
-
     }
 }
 
-@media (min-width: 720px) {
+@media screen and (min-width: 720px) {
     input[type='checkbox'] + label {
         display: none;
     }
@@ -162,5 +246,14 @@ ul#menu-list.open {
         height: 590px;
         background-image: url('./images/desktop/image-hero.jpg');
         background-size: 100% 100%;
+    }
+
+    footer {
+        padding: 50px 5%;
+        text-align: start;
+    }
+
+    .footer-logo {
+        flex-direction: row;       
     }
 }
