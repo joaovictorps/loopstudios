@@ -22,6 +22,10 @@
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
+.desktop {
+    display: none;
+}
+
 .logo {
     max-width: 192px;
     width: 100%;
@@ -118,7 +122,7 @@ ul#menu-list.open {
     width: 100%;
 }
 
-.banner-main > h2,
+.banner-main-description > h2,
 .our-creations > h2 {
     font-size: 32px;
     text-transform: uppercase;
@@ -131,7 +135,7 @@ ul#menu-list.open {
     margin-bottom: 50px;
 }
 
-.banner-main > p {
+.banner-main-description > p {
     font-size: 18px;
     font-weight: 700;
     color: var(--very-dark-gray);
@@ -193,6 +197,12 @@ footer {
     color: var(--dark-gray);
 }
 
+.footer-logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 @media screen and (min-width: 500px) {
     .banner-header > h1 {
         padding: 3.5%;
@@ -211,6 +221,10 @@ footer {
     .navigation {
         padding: 40px 5%;
         position: absolute;
+    }
+
+    main {
+        padding: 5%;
     }
 
     #menu-list {
@@ -248,12 +262,70 @@ footer {
         background-size: 100% 100%;
     }
 
+    .banner-main {
+        position: relative;
+    }
+
+    .banner-main > img {
+        width: 70%;
+    }
+
+    .banner-main-description {
+        right: 0;
+        bottom: 0;
+        width: 50%;
+        position: absolute;
+        padding: 35px;
+        background-color: var(--white);
+    }
+
+    .card {
+        padding: 0;
+    }
+
+    .copyright {
+        margin-top: 36px;
+    }
+
+    .icons {
+        text-align: end;
+    }
+
+    .creation-cards {
+        margin: 60px 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 30px;
+    }
+
     footer {
         padding: 50px 5%;
         text-align: start;
+        display: flex;
+        justify-content: space-between;
+    } 
+
+    .footer-logo-container {
+        justify-content: flex-start;
+    }
+
+    .nav-footer > ul {
+        display: flex;
+    }
+
+    .nav-footer > ul > li {
+        margin-right: 24px;
     }
 
     .footer-logo {
-        flex-direction: row;       
+        flex-direction: column;       
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
     }
 }
